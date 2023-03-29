@@ -1,2 +1,4 @@
 # RCGame
-A simple game 
+
+###### A _DOOM style_, FPS game.
+
