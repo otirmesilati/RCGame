@@ -10,6 +10,13 @@ class ObjectHandler:
 
         add_sprite(SpriteObject(game))
         add_sprite(Animated_sprite(game))
+        add_sprite(Animated_sprite(game, pos=(14.9, 1.1)))
+        add_sprite(Animated_sprite(game, pos=(5.9, 4.9)))
+        add_sprite(Animated_sprite(game, pos=(5.9, 3.1)))
+        add_sprite(Animated_sprite(game, pos=(9.9, 8.9)))
+        add_sprite(Animated_sprite(game, pos=(9.9, 10.1)))
+        add_sprite(Animated_sprite(game, pos=(11.1, 8.9)))
+        add_sprite(Animated_sprite(game, pos=(11.1, 10.1)))
         add_sprite(Animated_sprite(game, path=self.animated_sprite_path
                                               + '/red_candle_animated_sprite/red_candle_sprite_1.png', pos=(1.1, 1.1)))
         add_sprite(Animated_sprite(game, pos=(1.1, 12.9)))
