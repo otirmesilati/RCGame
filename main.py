@@ -7,6 +7,7 @@ from raycast import *
 from object_renderer import *
 from sprite_obj import *
 from object_handler import *
+from character_weapon import *
 
 
 class Game:
@@ -24,11 +25,13 @@ class Game:
         self.object_renderer = ObjectRenderer(self)
         self.raycasting = RayCasting(self)
         self.object_hanldler = ObjectHandler(self)
+        self.weapon = Weapon(self)
 
     def update(self):
         self.player.update()
         self.raycasting.update()
         self.object_hanldler.update()
+        self.weapon.update()
         pg.display.flip()
         self.delta_time = self.clock.tick(FRAMES)
         pg.display.set_caption(f'{self.clock.get_fps(): .1f}')
@@ -36,6 +39,7 @@ class Game:
     def draw(self):
         # self.screen.fill('black')
         self.object_renderer.draw()
+        self.weapon.draw()
         # self.map.draw()
         # self.player.draw()
 
