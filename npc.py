@@ -12,5 +12,19 @@ class NPC(Animated_sprite):
         self.pain_images = self.get_images(self.path + '/pain')
         self.walk_images = self.get_images(self.path + '/walk')
 
+        self.attack_dis = randint(3, 6)
+        self.speed = 0.03
+        self.size = 10
+        self.health = 100
+        self.attack_damage = 10
+        self.accuracy = 0.15
+        self.alive = True
+        self.pain = False
+
+    def update(self):
+        self.check_animation_time()
+        self.get_sprite()
+
+
 
 
