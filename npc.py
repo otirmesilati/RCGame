@@ -24,7 +24,9 @@ class NPC(Animated_sprite):
     def update(self):
         self.check_animation_time()
         self.get_sprite()
+        self.run_logic()
 
-
-
+    def run_logic(self):
+        if self.alive:
+            self.animate(self.idle_images)
 
