@@ -35,6 +35,7 @@ class NPC(Animated_sprite):
     def check_hit_npc(self):
         if self.ray_cast_value and self.game.player.shot:
             if HALF_WIDTH - self.sprite_half_width < self.screen_x < HALF_WIDTH + self.sprite_half_width:
+                self.game.sound.npc_pain.play()
                 self.game.player.shot = False
                 self.pain = True
 
