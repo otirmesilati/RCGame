@@ -18,6 +18,7 @@ class Game:
         self.screen = pg.display.set_mode(RESOLUTION)
         self.clock = pg.time.Clock()
         self.delta_time = 1
+        self.global_trigger = False
         self.new_game()
 
     def new_game(self):
